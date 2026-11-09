@@ -33,7 +33,7 @@ Copy
 Edit
 pip install joblib
 🚀 How to Run
-Save the provided code into a file named predict_pass_fail.py.
+The code lives in `app.py` (run it directly — no rename needed).
 
 Open your terminal or command prompt.
 
@@ -44,7 +44,7 @@ Run the script using the Python interpreter:
 bash
 Copy
 Edit
-python predict_pass_fail.py
+python app.py
 🧾 Output
 When you run the script, the console will first print information about the dataset, model evaluation metrics, and feature importance.
 

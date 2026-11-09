@@ -18,12 +18,13 @@ data = {
     'attendance': np.random.uniform(50, 100, n_students),
     'study_hours': np.random.uniform(0, 10, n_students),
     'extracurricular': np.random.choice([0, 1], n_students, p=[0.7, 0.3]),
-    'pass_fail': np.where(
-        (np.random.normal(60, 15, n_students) > 50) & 
-        (np.random.uniform(50, 100, n_students) > 60) & 
-        (np.random.uniform(0, 10, n_students) > 2), 1, 0
-    )
 }
+# Label derived from the ACTUAL generated features (see note above).
+data['pass_fail'] = np.where(
+    (data['exam_score'] > 50) &
+    (data['attendance'] > 60) &
+    (data['study_hours'] > 2), 1, 0
+)
 df = pd.DataFrame(data)
 
 # Step 2: Exploratory Data Analysis (EDA)
